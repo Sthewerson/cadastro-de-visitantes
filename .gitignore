@@ -1,0 +1,11 @@
+/docker/mysql_data/
+/*.class
+*.log
+*.tmp
+*.swp
+*.DS_Store
+*.iml
+*.jar
+*.war
+target/
+out/
