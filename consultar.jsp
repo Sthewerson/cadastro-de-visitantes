@@ -12,7 +12,7 @@
     <h1>Visitantes Cadastrados</h1>
     <table border="1">
         <tr>
-            <th>ID</th><th>Nome</th><th>Email</th><th>Telefone</th>
+            <th>ID</th><th>Nome</th><th>Email</th><th>Telefone</th><th>Ações</th>
         </tr>
         <%
             if (visitantes != null) {
@@ -23,6 +23,10 @@
             <td><%= v.getNome() %></td>
             <td><%= v.getEmail() %></td>
             <td><%= v.getTelefone() %></td>
+            <td>
+                <a href="VisitanteServlet?action=edit&id=<%= v.getId() %>">Editar</a> |
+                <a href="VisitanteServlet?action=delete&id=<%= v.getId() %>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+            </td>
         </tr>
         <%
                 }
@@ -33,3 +37,4 @@
     <a href="cadastrar.jsp">Cadastrar Novo Visitante</a>
 </body>
 </html>
+
